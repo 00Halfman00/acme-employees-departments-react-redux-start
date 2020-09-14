@@ -1,24 +1,10 @@
 import React from 'react';
 import Department from './Department';
-const Departments = ({ departments, employees, destroyEmployee, removeFromDepartment })=> {
-  return (
+const Departments = ({ departments, employees, destroyEmployee, removeFromDepartment })=> (
     <ul className='departments'>
-      <Department destroyEmployee={ destroyEmployee } employees={ employees } />
-      {
-        departments.map( department => {
-          return (
-            <Department
-              key = { department.id }
-              department = { department }
-              employees = { employees }
-              destroyEmployee = { destroyEmployee }
-              removeFromDepartment = { removeFromDepartment }
-            />
-          );
-        })
-      }
+      <Department />
     </ul>
-  );
-}
+);
+
 
 export default Departments;
